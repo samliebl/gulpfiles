@@ -1,9 +1,6 @@
 import pkg from 'gulp';
 const { src, dest, watch, series } = pkg;
 
-import gulpLoadPlugins from 'gulp-load-plugins';
-const plugins = gulpLoadPlugins();
-
 import gulpRead from 'gulp-read';
 import gulpHeader from 'gulp-header';
 import gulpCsv2json from 'gulp-csv2json';
