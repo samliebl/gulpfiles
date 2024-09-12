@@ -29,6 +29,7 @@ $RECYCLE.BIN/
 .LSOverride
 node_modules/
 dist/
+bs-config.cjs
 
 # Thumbnails
 ._*

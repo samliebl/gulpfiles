@@ -58,8 +58,7 @@ export function nunjucks() {
         .pipe(nunjucksRender({
             data: data,
             path: [
-                'src/tmpl',
-                'src/tmpl/layouts'
+                'src/tmpl/'
             ]
         }))
         .pipe(htmlmin({ collapseWhitespace: false }))
