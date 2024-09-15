@@ -1,0 +1,129 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+// Variables
+$primary-color: #222;
+$selection-bg: #b3d4fc;
+$hr-border-color: #ccc;
+$print-border-color: #999;
+
+// Base styles
+html {
+  color: $primary-color;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+// Selection styling
+::selection,
+::-moz-selection {
+  background: $selection-bg;
+  text-shadow: none;
+}
+
+// Horizontal rule
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $hr-border-color;
+  margin: 1em 0;
+  padding: 0;
+}
+
+// Fieldset
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+// Vertical resizing for textarea
+textarea {
+  resize: vertical;
+}
+
+// Helper classes
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+// Clearfix Mixin
+@mixin clearfix {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+// Example usage
+.clearfix {
+  @include clearfix;
+}
+
+// Print styles
+@mixin print-style {
+  background: #fff !important;
+  color: #000 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+// Apply to all elements in print mode
+@media print {
+  *,
+  *::before,
+  *::after {
+    @include print-style;
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid $print-border-color;
+    page-break-inside: avoid;
+  }
+}
+
+// Responsive adjustments
+@media only screen and (min-width: 35em) {
+  /* Adjustments for larger screens */
+}
+
+// High-resolution adjustments
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
