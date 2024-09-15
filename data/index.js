@@ -13,7 +13,7 @@ export const data = {
             },
             {
                 rel: 'stylehseet',
-                href: 'css/index.css'
+                href: 'css/main.css'
             }
         ]
     }

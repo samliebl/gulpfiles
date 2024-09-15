@@ -39,17 +39,22 @@ const paths = {
 export function compileScss() {
     return src(paths.scss)
         .pipe(compileSass().on('error', compileSass.logError))
-        .pipe(rename({ basename: 'style' })) // Ensure output filename is style.css
-        .pipe(dest(paths.cssdest)); // Write the compiled CSS to dist/css
+        // Ensure output filename is main.css
+        .pipe(rename({ basename: 'main' })) 
+        // Write the compiled CSS to dist/css
+        .pipe(dest(paths.cssdest)); 
 }
 
-// Task to compile SCSS to minified CSS with .min appended before the file extension
+// Task to compile SCSS to minified CSS with .min appended before the file 
+// extension
 export function minifyCss() {
     return src(paths.scss)
         .pipe(compileSass().on('error', compileSass.logError))
         .pipe(cleanCSS())
-        .pipe(rename({ basename: 'style', suffix: '.min' })) // Ensure minified file is style.min.css
-        .pipe(dest(paths.cssdest)); // Write the minified CSS to dist/css
+        // Ensure minified file is main.min.css
+        .pipe(rename({ basename: 'main', suffix: '.min' }))
+        // Write the minified CSS to dist/css
+        .pipe(dest(paths.cssdest)); 
 }
 
 export function nunjucks() {
