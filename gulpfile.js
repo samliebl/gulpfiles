@@ -7,6 +7,7 @@ import cleanCSS from 'gulp-clean-css';
 import gulpHeader from 'gulp-header';
 import plumber from 'gulp-plumber';
 import htmlmin from 'gulp-htmlmin';
+import svgo from 'gulp-svgo';
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
 
@@ -32,7 +33,10 @@ const paths = {
     scss: 'src/sass/**/*.scss',
     cssdest: 'dist/css',
     tmpl: 'src/tmpl/**/*.njk',
-    tmpldest: 'dist/'
+    tmpldest: 'dist/',
+    imgdest: 'dist/img/',
+    img: 'src/img',
+    svg: 'src/img/svg/*.svg'
 };
 
 // Task to compile SCSS to regular CSS
@@ -68,6 +72,12 @@ export function nunjucks() {
         }))
         .pipe(htmlmin({ collapseWhitespace: false }))
         .pipe(dest(paths.tmpldest))
+}
+
+export function optimizeSvg() {
+    return src(paths.svg)
+        .pipe(svgo())
+        .pipe(dest(paths.imgdest))
 }
 
 // Watch SCSS files and run the tasks automatically on change
