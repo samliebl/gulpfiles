@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "exiftool-vendored": "^28.2.1",
     "gulp": "^4.0.2",
     "gulp-batch-replace": "^0.0.0",
     "gulp-changed": "^4.0.3",

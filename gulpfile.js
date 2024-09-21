@@ -8,6 +8,10 @@ import gulpHeader from 'gulp-header';
 import plumber from 'gulp-plumber';
 import htmlmin from 'gulp-htmlmin';
 import svgo from 'gulp-svgo';
+import imagemin from 'gulp-imagemin';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
 
@@ -36,6 +40,7 @@ const paths = {
     tmpldest: 'dist/',
     imgdest: 'dist/img/',
     img: 'src/img',
+    images: 'src/img/images/**/*',
     svg: 'src/img/svg/*.svg'
 };
 
@@ -44,9 +49,9 @@ export function compileScss() {
     return src(paths.scss)
         .pipe(compileSass().on('error', compileSass.logError))
         // Ensure output filename is main.css
-        .pipe(rename({ basename: 'main' })) 
+        .pipe(rename({ basename: 'main' }))
         // Write the compiled CSS to dist/css
-        .pipe(dest(paths.cssdest)); 
+        .pipe(dest(paths.cssdest));
 }
 
 // Task to compile SCSS to minified CSS with .min appended before the file 
@@ -58,7 +63,7 @@ export function minifyCss() {
         // Ensure minified file is main.min.css
         .pipe(rename({ basename: 'main', suffix: '.min' }))
         // Write the minified CSS to dist/css
-        .pipe(dest(paths.cssdest)); 
+        .pipe(dest(paths.cssdest));
 }
 
 export function nunjucks() {
@@ -80,6 +85,12 @@ export function optimizeSvg() {
         .pipe(dest(paths.imgdest))
 }
 
+export function minifyImages() {
+    return src(paths.images)
+        .pipe(imagemin())
+        .pipe(dest(paths.imgdest))
+}
+
 // Watch SCSS files and run the tasks automatically on change
 export function watchFiles() {
     watch([
@@ -89,4 +100,11 @@ export function watchFiles() {
 }
 
 // Default task
-export default series(compileScss, minifyCss, nunjucks, watchFiles);
+export default series(
+    compileScss,
+    minifyCss,
+    nunjucks,
+    optimizeSvg,
+    minifyImages,
+    watchFiles
+);
