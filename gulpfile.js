@@ -34,9 +34,9 @@ const date = `${yyyy}-${mm}-${dd}`;
 const compileSass = gulpSass(sass);
 
 const paths = {
-    scss: 'src/sass/**/*.scss',
+    scss: 'src/sass/*.scss',
     cssdest: 'dist/css',
-    tmpl: 'src/tmpl/**/*.njk',
+    tmpl: 'src/tmpl/*.njk',
     tmpldest: 'dist/',
     imgdest: 'dist/img/',
     img: 'src/img',
@@ -68,7 +68,7 @@ export function minifyCss() {
 
 // Compile Nunjucks templates
 export function nunjucks() {
-    return src('src/tmpl/*.njk') // Only top-level .njk files
+    return src(paths.tmpl) // Only top-level .njk files
         .pipe(plumber())
         .pipe(nunjucksRender({
             data: data,
