@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@samliebl/get-dirtree": "^1.0.0",
     "exiftool-vendored": "^28.2.1",
     "gulp": "^4.0.2",
     "gulp-batch-replace": "^0.0.0",

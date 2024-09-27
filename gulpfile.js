@@ -66,6 +66,7 @@ export function minifyCss() {
         .pipe(dest(paths.cssdest));
 }
 
+// Compile Nunjucks templates
 export function nunjucks() {
     return src(paths.tmpl)
         .pipe(plumber())
@@ -79,12 +80,14 @@ export function nunjucks() {
         .pipe(dest(paths.tmpldest))
 }
 
+// Optimize and minify SVGs
 export function optimizeSvg() {
     return src(paths.svg)
         .pipe(svgo())
         .pipe(dest(paths.imgdest))
 }
 
+// Optimize and minify images
 export function minifyImages() {
     return src(paths.images)
         .pipe(imagemin())
