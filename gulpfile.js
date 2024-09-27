@@ -68,7 +68,7 @@ export function minifyCss() {
 
 // Compile Nunjucks templates
 export function nunjucks() {
-    return src(paths.tmpl)
+    return src('src/tmpl/*.njk') // Only top-level .njk files
         .pipe(plumber())
         .pipe(nunjucksRender({
             data: data,
@@ -76,8 +76,8 @@ export function nunjucks() {
                 'src/tmpl/'
             ]
         }))
-        .pipe(htmlmin({ collapseWhitespace: false }))
-        .pipe(dest(paths.tmpldest))
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(dest(paths.tmpldest));
 }
 
 // Optimize and minify SVGs

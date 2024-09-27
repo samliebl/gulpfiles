@@ -1,10 +1,15 @@
 {% extends "layouts/main.njk" %}
 {% block content %}
 <main>
-    <h1>Welcome to the website!!</h1>
-    <p>This is a page rendered using Nunjucks.</p>
-    <p>supposed to be <code>site.title</code></p>
-    <p>{{ site.title }}</p>
-    <p>What's up.</p>
+    <div class="container">
+        <div class="measure">
+            <p>Hi. Thanks for stopping by. I&rsquo;m Sam and this is my homepage. 90s vibes.</p>
+            <p>I work; I write; I draw and do graphic design; I tinker with computer hardware and electronics; I code (at a <em>very</em> basic level, but I&rsquo;m working on it).</p>
+            <p>I&rsquo;m not really on any social media except <a href="{{ social.linkedin }}">LinkedIn</a> for work and lately, against my better judgement, <a href="{{ social.instagram }}">Instagram</a> for creative stuff. Oh, and you can also find the music I make on <a href="{{ social.soundcloud }}">Soundcloud</a>. It&rsquo;s instrumental hip hop, usually sample based, if you&rsquo;re into that sort of thing.</p>
+            <p>This is me:</p>
+        </div>
+        <img class="img" src="https://saml.nyc3.cdn.digitaloceanspaces.com/sam_portrait_3.min.jpg">
+        <div class="mt1 measure">All thoughts, opinions and anything expressed whatsoever are mine and mine alone. They in no way represent any kind of position or endorsement of other parties, including, but not limited to, employers and clients.</div>
+    </div>
 </main>
 {% endblock %}
