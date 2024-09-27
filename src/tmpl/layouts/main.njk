@@ -14,12 +14,15 @@
 </head>
 
 <body>
+    {% include "partials/header.njk" %}
     {% block content %}
     {% endblock %}
     {% include "partials/footer.njk" %}
     <!-- test -->
     <!-- Display the current year for the copyright footer -->
-    <script src="js/main.js"></script>
+    {% for j in site.js %}
+    <script src="{{ j }}"></script>
+    {% endfor %}
     <script type="text/javascript">
     displayCurrentYear();
     </script>

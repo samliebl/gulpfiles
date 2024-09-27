@@ -1,3 +1,13 @@
+// normalize.css (as SCSS)
 @import '../../node_modules/normalize-scss/sass/normalize/_import-now.scss';
 
+// Other imports
+// 
+// sass/
+// |- vendor/
+//    |- export.scss
+// 	  |- _colors.scss (Colors, Adam Morse)
+// 	  |- _h5bp-main.scss (HTML5 Boilerplate's "main"/"style" as SCSS)
 @import 'vendor/export.scss';
+
+@import 'components/export.scss';

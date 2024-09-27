@@ -1,0 +1,7 @@
+<nav>
+    <ul>
+        {% for item in site.navitems %}
+        <li><a href="{{ item.href }}">{{ item.anchor }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
