@@ -1,0 +1,76 @@
+$properties: ('m': 'margin',
+'p': 'padding'
+);
+
+$directions: ('': '',
+'t': '-top',
+'b': '-bottom',
+'l': '-left',
+'r': '-right'
+);
+
+@for $i from 0 through 10 {
+
+    @each $dk,
+    $dv in $directions {
+
+        @each $pk,
+        $pv in $properties {
+            @if $i==0 {
+                .#{$pk}#{$dk}#{$i} {
+                    #{$pv}#{$dv}: #{$i};
+                }
+
+                .#{$pk}x#{$i} {
+                    #{$pv}-left: #{$i};
+                    #{$pv}-right: #{$i};
+                }
+
+                .#{$pk}y#{$i} {
+                    #{$pv}-top: #{$i};
+                    #{$pv}-bottom: #{$i};
+                }
+            }
+
+            @else {
+                .#{$pk}#{$dk}#{$i} {
+                    #{$pv}#{$dv}: #{$i}rem;
+                }
+
+                .#{$pk}x#{$i} {
+                    #{$pv}-left: #{$i}rem;
+                    #{$pv}-right: #{$i}rem;
+                }
+
+                .#{$pk}y#{$i} {
+                    #{$pv}-top: #{$i}rem;
+                    #{$pv}-bottom: #{$i}rem;
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through 10 {
+
+    @each $dk,
+    $dv in $directions {
+
+        @each $pk,
+        $pv in $properties {
+            .#{$pk}#{$dk}0-#{$i} {
+                #{$pv}#{$dv}: #{($i * 0.1)}rem;
+            }
+
+            .#{$pk}x#{$i} {
+                #{$pv}-left: #{$i}rem;
+                #{$pv}-right: #{$i}rem;
+            }
+
+            .#{$pk}y#{$i} {
+                #{$pv}-top: #{$i}rem;
+                #{$pv}-bottom: #{$i}rem;
+            }
+        }
+    }
+}
