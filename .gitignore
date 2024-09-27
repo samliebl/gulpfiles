@@ -30,7 +30,7 @@ $RECYCLE.BIN/
 node_modules/
 dist/
 bs-config.*js
-_*
+_*/
 
 # Thumbnails
 ._*
