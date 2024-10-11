@@ -1,0 +1,139 @@
+
+// COLOR VARIABLES
+
+$navy:  #002B75;
+$blue:  #0050D4;
+$aqua:  #00D9F7;
+$teal:  #00A6A6;
+$olive: #00B562;
+$green: #00D942;
+$lime:  #B4D900;
+$yellow:  #EBCF00;
+$orange:  #EB7700;
+$red:     #EB0012;
+$maroon:  #790009;
+$fuchsia: #FF00C3;
+$purple:  #8D00FF;
+$white:  #fff;
+$silver: #777;
+$gray:   #333;
+$black:  #000;
+
+/*
+
+   SKINS
+   - Backgrounds
+   - Colors
+   - Border colors
+   - SVG fills
+   - SVG Strokes
+
+*/
+
+
+/* Backgrounds */
+
+.oc-bg-navy {    background-color: $navy; }
+.oc-bg-blue {    background-color: $blue; }
+.oc-bg-aqua {    background-color: $aqua; }
+.oc-bg-teal {    background-color: $teal; }
+.oc-bg-olive {   background-color: $olive; }
+.oc-bg-green {   background-color: $green; }
+.oc-bg-lime {    background-color: $lime; }
+.oc-bg-yellow {  background-color: $yellow; }
+.oc-bg-orange {  background-color: $orange; }
+.oc-bg-red {     background-color: $red; }
+.oc-bg-fuchsia { background-color: $fuchsia; }
+.oc-bg-purple {  background-color: $purple; }
+.oc-bg-maroon {  background-color: $maroon; }
+.oc-bg-white {   background-color: $white; }
+.oc-bg-gray {    background-color: $gray; }
+.oc-bg-silver {  background-color: $silver; }
+.oc-bg-black {   background-color: $black; }
+
+
+/* Colors */
+
+.oc-navy {       color: $navy; }
+.oc-blue {       color: $blue; }
+.oc-aqua {       color: $aqua; }
+.oc-teal {       color: $teal; }
+.oc-olive {      color: $olive; }
+.oc-green {      color: $green; }
+.oc-lime {       color: $lime; }
+.oc-yellow {     color: $yellow; }
+.oc-orange {     color: $orange; }
+.oc-red {        color: $red; }
+.oc-fuchsia {    color: $fuchsia; }
+.oc-purple {     color: $purple; }
+.oc-maroon {     color: $maroon; }
+.oc-white {      color: $white; }
+.oc-silver {     color: $silver; }
+.oc-gray {       color: $gray; }
+.oc-black {      color: $black; }
+
+
+/* Border colors 
+
+   Use with another border utility that sets border-width and style 
+   i.e .border { border-width: 1px; border-style: solid; }     
+*/
+
+.oc-border--navy {    border-color: $navy; }
+.oc-border--blue {    border-color: $blue; }
+.oc-border--aqua {    border-color: $aqua; }
+.oc-border--teal {    border-color: $teal; }
+.oc-border--olive {   border-color: $olive; }
+.oc-border--green {   border-color: $green; }
+.oc-border--lime {    border-color: $lime; }
+.oc-border--yellow {  border-color: $yellow; }
+.oc-border--orange {  border-color: $orange; }
+.oc-border--red {     border-color: $red; }
+.oc-border--fuchsia { border-color: $fuchsia; }
+.oc-border--purple {  border-color: $purple; }
+.oc-border--maroon {  border-color: $maroon; }
+.oc-border--white {   border-color: $white; }
+.oc-border--gray {    border-color: $gray; }
+.oc-border--silver {  border-color: $silver; }
+.oc-border--black {   border-color: $black; }
+
+
+/* Fills for SVG */
+
+.oc-fill-navy {    fill: $navy; }
+.oc-fill-blue {    fill: $blue; }
+.oc-fill-aqua {    fill: $aqua; }
+.oc-fill-teal {    fill: $teal; }
+.oc-fill-olive {   fill: $olive; }
+.oc-fill-green {   fill: $green; }
+.oc-fill-lime {    fill: $lime; }
+.oc-fill-yellow {  fill: $yellow; }
+.oc-fill-orange {  fill: $orange; }
+.oc-fill-red {     fill: $red; }
+.oc-fill-fuchsia { fill: $fuchsia; }
+.oc-fill-purple {  fill: $purple; }
+.oc-fill-maroon {  fill: $maroon; }
+.oc-fill-white {   fill: $white; }
+.oc-fill-gray {    fill: $gray; }
+.oc-fill-silver {  fill: $silver; }
+.oc-fill-black {   fill: $black; }
+
+/* Strokes for SVG */
+
+.oc-stroke-navy {    stroke: $navy; }
+.oc-stroke-blue {    stroke: $blue; }
+.oc-stroke-aqua {    stroke: $aqua; }
+.oc-stroke-teal {    stroke: $teal; }
+.oc-stroke-olive {   stroke: $olive; }
+.oc-stroke-green {   stroke: $green; }
+.oc-stroke-lime {    stroke: $lime; }
+.oc-stroke-yellow {  stroke: $yellow; }
+.oc-stroke-orange {  stroke: $orange; }
+.oc-stroke-red {     stroke: $red; }
+.oc-stroke-fuchsia { stroke: $fuchsia; }
+.oc-stroke-purple {  stroke: $purple; }
+.oc-stroke-maroon {  stroke: $maroon; }
+.oc-stroke-white {   stroke: $white; }
+.oc-stroke-gray {    stroke: $gray; }
+.oc-stroke-silver {  stroke: $silver; }
+.oc-stroke-black {   stroke: $black; }

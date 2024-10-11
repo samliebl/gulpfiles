@@ -1,0 +1,63 @@
+{% extends "layouts/main.njk" %}
+{% block content %}
+<main>
+    <div class="container">
+        <section class="measure">
+            <p>Colophon&emsp;&bull;&emsp;<em class="inter">noun</em></p>
+            <p>The term <em>colophon</em> derives from the Late Latin <em>colophōn</em>, from the Greek <span class="inter greek">κολοφών</span> (meaning “summit” or “finishing touch”).<sup>1</sup></p>
+            <ol>
+                <li>a publisher&rsquo;s or printer&rsquo;s distinctive emblem, used as an identifying device on its books and other works.</li>
+                <li>an inscription at the end of a book or manuscript, used especially in the 15th and 16th centuries, giving the title or subject of the work, its author, the name of the printer or publisher, and the date and place of publication.</li>
+            </ol>
+            <h4>What this site is made with</h4>
+            <p>This website was constructed with HTML5, CSS and plain ol&rsquo; vanilla JavaScript.</p>
+            <p>The HTML is all written using <a href="https://html5boilerplate.com">HTML5 Boilerplate</a> as a starting point, and their CSS template, which in turn is based on <a href="https://necolas.github.io/normalize.css/">Normalize.css</a> and that body of work by <a href="https://nicolasgallagher.com">Nicolas Gallagher</a>, et al.</p>
+            <p><a href="https://github.com/mrmrs/colors-saturated">Colors</a> include those curated by <a href="https://mrmrs.cc">Adam Morse</a>.</p>
+            <p>Though it seems to have fallen out of favor as an enterprise-grade CSS framework, I was immeasurably influenced by Morse’s work on <a href="https://tachyons.io">Tachyons</a> in its approach to writing HTML and CSS markup, but especially so in its aesthetic. Along with Morse, <a href="https://www.johno.com">John Otander</a> and someone else whose name escapes me were the original primary contributors to Tachyons, but I may be wrong there. In any event there is a large group of contributors <a href="https://github.com/tachyons-css/tachyons/graphs/contributors">on GitHub</a>.</p>
+            <h5>Typefaces</h5>
+            <p>This site is almost entirely presented in <a href="https://en.wikipedia.org/wiki/Times_New_Roman">Times New Roman</a>, created by <a href="https://en.wikipedia.org/wiki/Stanley_Morison">Stanley Morison</a> in collaboration with <a href="https://en.wikipedia.org/wiki/Victor_Lardent">Victor Lardent</a>, originally for the foundry <a href="https://en.wikipedia.org/wiki/Monotype_Imaging">Monotype</a>. Described by <a href="https://matthewbutterick.com">Matthew Butterick</a> as a “workhorse” typeface, it’s widely supported and a standard typeface used across the web.</p>
+            <figure class="type-specimen">
+                <figcaption>
+                    <div class="block figcaption">{{specimens.typography.timesNewRoman.name}}</div>
+                    <div class="block figcaption">{{specimens.typography.timesNewRoman.designer}}</div>
+                </figcaption>
+                <p class="typeface">The quick brown fox jumped over the lazy dog.</p>
+                <figcaption>
+                    <div class="block figcaption">{{specimens.typography.timesNewRoman.category}}</div>
+                    <div class="block figcaption roboto-mono">00{{specimens.typography.timesNewRoman.index + 1}}</div>
+                </figcaption>
+            </figure>
+            <p>Here and there I employ <a href="https://rsms.me/inter/">Inter</a>, the greatest open-source sans-serif typeface ever created, and the top contender for greatest overall. Inter was created by <a href="https://rsms.me">Rasmus Andersson</a>.</p>
+            <figure class="type-specimen">
+                <figcaption>
+                    <div class="block figcaption">{{specimens.typography.inter.name}}</div>
+                    <div class="block figcaption">{{specimens.typography.inter.designer}}</div>
+                </figcaption>
+                <p class="typeface">The quick brown fox jumped over the lazy dog.</p>
+                <figcaption>
+                    <div class="block figcaption">{{specimens.typography.inter.category}}</div>
+                    <div class="block figcaption roboto-mono">00{{specimens.typography.inter.index + 1}}</div>
+                </figcaption>
+            </figure>
+            <p>I’ve also used Roboto Mono, which is one of my favorite monospaced typefaces, especially in the “Google Fonts” echelon of reach and adoption across the web<span class="emdash"></span>the “mass-market” or mainstream typefaces across the web as of this writing (2024). The Roboto type family was designed by <a href="https://www.theartoffun.com/about">Christian Robinson</a>. I want to say it was originally for Google for use in their “Material Design” language. But that was years ago. Google may still use Roboto as their base content typeface, but their brand typeface changed in the time since. At one point it was called “Product Sans” and was, as bespoke corporate typefaces go, pretty good. I think they’ve made further tweaks and it might be called something like “Alphabet Sans” now. I’m not sure where they are with all that.</p>
+            <figure class="type-specimen">
+                <figcaption>
+                    <div class="block figcaption">{{specimens.typography.robotoMono.name}}</div>
+                    <div class="block figcaption">{{specimens.typography.robotoMono.designer}}</div>
+                </figcaption>
+                <p class="typeface">The quick brown fox jumped over the lazy dog.</p>
+                <figcaption>
+                    <div class="block figcaption">{{specimens.typography.robotoMono.category}}</div>
+                    <div class="block figcaption roboto-mono">00{{specimens.typography.robotoMono.index + 1}}</div>
+                </figcaption>
+            </figure>
+        </section>
+        <section>
+            <h4>Notes</h4>
+            <ol>
+                <li><em>Colophon (publishing)</em>. Wikipedia. [<a href="https://en.wikipedia.org/wiki/Colophon_(publishing)">Link</a>].</li>
+            </ol>
+        </section>
+    </div>
+</main>
+{% endblock %}

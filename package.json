@@ -45,11 +45,13 @@
     "gulp-svgo": "^2.2.1",
     "normalize-scss": "^8.0.0",
     "nunjucks": "^3.2.4",
-    "sass": "^1.78.0",
     "vinyl-fs": "^3.0.3"
   },
   "dependencies": {
     "gulp-htmlmin": "^5.0.1",
-    "gulp-plumber": "^1.2.1"
+    "gulp-plumber": "^1.2.1",
+    "sass": "^1.78.0",
+    "tachyons-sass": "^4.9.5",
+    "open-color": "^1.9.1"
   }
 }

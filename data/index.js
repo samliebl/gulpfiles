@@ -31,5 +31,27 @@ export const data = {
         soundcloud: 'https://soundcloud/boutiquebeats/',
         github: 'https://github/samliebl/',
         instagram: 'https://instagram/saminpractice/'
+    },
+    specimens: {
+        typography: {
+            timesNewRoman: {
+                name: 'Times New Roman',
+                designer: 'Stanley Morison',
+                category: 'Typeface',
+                index: 0
+            },
+            inter: {
+                name: 'Inter',
+                designer: 'Rasmus Andersson',
+                category: 'Typeface',
+                index: 1
+            },
+            robotoMono: {
+                name: 'Roboto Mono',
+                designer: 'Christian Robinson',
+                category: 'Typeface',
+                index: 2
+            }
+        }
     }
 };
